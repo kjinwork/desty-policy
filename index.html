@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -96,7 +96,7 @@
   <div class="wrap">
 
     <!-- ================= KOREAN ================= -->
-    <section id="ko">
+    <section id="ko" class="hidden">
       <header>
         <h1>개인정보처리방침</h1>
         <p class="meta">Desty (데스티) 모바일 애플리케이션</p>
@@ -208,7 +208,7 @@
     </section>
 
     <!-- ================= ENGLISH ================= -->
-    <section id="en" class="hidden">
+    <section id="en">
       <header>
         <h1>Privacy Policy</h1>
         <p class="meta">Desty mobile application</p>
@@ -334,7 +334,16 @@
         history.replaceState(null, '', lang === 'en' ? '#en' : '#ko');
       }
     }
-    if (location.hash === '#en') showLang('en');
+    // Default to English; honor an explicit #ko hash or a Korean browser locale.
+    if (location.hash === '#ko') {
+      showLang('ko');
+    } else if (location.hash === '#en') {
+      showLang('en');
+    } else if ((navigator.language || '').toLowerCase().startsWith('ko')) {
+      showLang('ko');
+    } else {
+      showLang('en');
+    }
   </script>
 </body>
 </html>
