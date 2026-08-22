@@ -72,6 +72,13 @@
     a { color: var(--accent); }
     ul { padding-left: 22px; }
     li { margin: 4px 0; }
+    .callout {
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      border-radius: 4px;
+      padding: 12px 16px;
+      margin: 16px 0;
+    }
     footer {
       margin-top: 56px;
       padding-top: 20px;
@@ -99,30 +106,102 @@
     <section id="ko" class="hidden">
       <header>
         <h1>개인정보처리방침</h1>
-        <p class="meta">Desty (데스티) 모바일 애플리케이션</p>
-        <p class="meta">시행일: 2026년 7월 15일 · 최종 수정일: 2026년 7월 15일</p>
+        <p class="meta">Desty (데스티) 모바일 애플리케이션 · <code>com.desty.desty</code></p>
+        <p class="meta">시행일: 2026년 8월 22일 · 최종 수정일: 2026년 8월 22일</p>
         <p class="lang-switch"><a onclick="showLang('en')">English</a></p>
       </header>
 
       <p>
-        본 개인정보처리방침은 Desty(이하 "본 앱")가 사용자의 정보를 어떻게 수집,
-        이용, 공유, 보호하는지 설명합니다. 본 앱을 설치하고 사용함으로써 사용자는
-        본 방침에 기재된 내용에 동의하는 것으로 간주됩니다.
+        본 개인정보처리방침은 Desty(이하 "본 앱")가 사용자의 정보를 어떻게 다루는지
+        설명합니다. 동작이 플랫폼별로 다른 부분이 있어, 해당하는 곳에는 iOS와 Android를
+        나누어 적었습니다.
       </p>
+
+      <div class="callout">
+        <strong>요약.</strong> 본 앱에는 회원가입도, 로그인도, 개발자가 운영하는 서버도
+        없습니다. 사용자가 저장한 목적지는 기기와 <em>사용자 본인의</em> 클라우드 계정
+        (iOS는 iCloud, Android는 구글 계정 백업)에만 저장되며, 개발자는 그 내용을 볼 수
+        없습니다. Android 버전에는 광고가 있고, 광고 파트너가 별도로 정보를 수집합니다.
+        iOS 버전에는 광고가 없습니다.
+      </div>
 
       <h2>1. 앱 개요</h2>
       <p>
-        Desty는 사용자가 목적지 목록을 저장하고, 항목을 탭하면 지도 앱(예: Google
-        지도)으로 길찾기를 실행하는 애플리케이션입니다. 사용자가 저장하는 목적지
-        데이터는 <strong>사용자 기기 내부에만 저장</strong>되며, 당사는 별도의 서버나
-        데이터베이스에 이를 수집·저장하지 않습니다.
+        Desty는 자주 가는 장소를 목록으로 저장해두고, 항목을 탭하면 지도 앱(Google 지도)의
+        길찾기를 여는 앱입니다. 목적지에는 이름, 주소나 장소명, 메모, 그룹, 그리고 사용자가
+        직접 캡처한 경우 좌표가 들어갑니다.
       </p>
 
-      <h2>2. 수집하는 정보</h2>
+      <h2>2. 개발자가 수집하는 정보</h2>
       <p>
-        본 앱은 회원가입이나 로그인을 요구하지 않으며, 이름·이메일·전화번호 등
-        직접적인 개인 식별 정보를 요청하거나 수집하지 않습니다. 다만, 앱 내에
-        게재되는 광고(Google AdMob)를 통해 다음 정보가 수집 및 처리될 수 있습니다.
+        <strong>없습니다.</strong> 본 앱은 회원가입이나 로그인을 요구하지 않고, 이름·이메일·
+        전화번호 등 개인 식별 정보를 요청하지 않으며, 개발자가 운영하는 서버나 데이터베이스가
+        존재하지 않습니다. 사용자가 저장한 목적지는 개발자에게 전송되지 않습니다.
+      </p>
+
+      <h2>3. 데이터가 저장되는 곳</h2>
+      <p>
+        목적지 목록과 앱 설정(정렬 기준, 언어)은 기기 내부 저장소에 보관됩니다. 여기에 더해,
+        앱을 삭제했다가 다시 설치해도 목록이 남도록 <strong>사용자 본인의 클라우드 계정</strong>에
+        사본이 보관됩니다.
+      </p>
+      <table>
+        <thead>
+          <tr><th>플랫폼</th><th>사본이 보관되는 곳</th><th>개발자의 접근</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>iOS</td>
+            <td>사용자의 iCloud 계정 (iCloud 키-값 저장소). 앱 설정 &gt; 백업에서 끌 수 있습니다.</td>
+            <td>불가</td>
+          </tr>
+          <tr>
+            <td>Android</td>
+            <td>사용자의 구글 계정 (Android 자동 백업). 기기의 시스템 백업 설정을 따릅니다.</td>
+            <td>불가</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        두 경우 모두 데이터는 사용자 본인의 계정에 들어가며, 그 처리에는 각각 Apple과 Google의
+        개인정보처리방침이 적용됩니다. 개발자는 해당 데이터를 조회할 수단이 없습니다.
+      </p>
+      <p>
+        설정 화면의 <strong>내보내기</strong> 기능으로 목록을 JSON 파일로 저장할 수도 있습니다.
+        저장 위치와 이후 처리는 전적으로 사용자가 정합니다.
+      </p>
+
+      <h2>4. 위치 정보</h2>
+      <p>
+        본 앱은 사용자가 목적지 추가·수정 화면에서 <strong>"현재 위치 사용"을 직접 눌렀을 때만</strong>
+        위치 권한을 요청하고 좌표를 읽습니다. 읽은 좌표는 해당 목적지의 일부로 위 3항과 같은
+        방식으로 저장되며, 개발자에게 전송되지 않습니다. 앱은 백그라운드에서 위치를 추적하지
+        않습니다.
+      </p>
+
+      <h2>5. 앱이 보내는 네트워크 요청</h2>
+      <p>본 앱이 스스로 보내는 요청은 하나뿐입니다.</p>
+      <ul>
+        <li>
+          <strong>단축 링크 펼치기.</strong> 사용자가 Google 지도에서 공유한 내용을 Desty로
+          보내면, 그 안에 든 <code>maps.app.goo.gl</code> 단축 링크를 펼쳐 장소 이름과 좌표를
+          알아내기 위해 해당 주소로 요청을 보냅니다. 이 요청은 Google에 전달되며, 개발자를
+          거치지 않습니다.
+        </li>
+      </ul>
+      <p>
+        이와 별개로, 목록에서 목적지를 탭하면 지도 링크가 지도 앱이나 브라우저로 넘겨져
+        열립니다. 그 시점부터는 해당 앱과 Google의 정책이 적용됩니다.
+      </p>
+
+      <h2>6. 광고 — Android 버전에만 있습니다</h2>
+      <p>
+        <strong>iOS 버전에는 광고가 없습니다.</strong> 광고 SDK가 초기화되지 않으므로 광고 요청도,
+        광고 식별자 수집도 발생하지 않습니다.
+      </p>
+      <p>
+        <strong>Android 버전에는 배너 광고가 표시되며</strong>, 광고 파트너인 Google AdMob이 다음
+        정보를 수집·처리할 수 있습니다.
       </p>
       <table>
         <thead>
@@ -131,8 +210,8 @@
         <tbody>
           <tr>
             <td>대략적인 위치</td>
-            <td>도시 수준의 근사 위치 정보(정밀 GPS 좌표 아님)</td>
-            <td>맞춤형 광고 게재</td>
+            <td>도시 수준의 근사 위치 (앱이 캡처하는 정밀 좌표와는 별개입니다)</td>
+            <td>광고 게재</td>
           </tr>
           <tr>
             <td>기기 또는 기타 ID</td>
@@ -141,66 +220,59 @@
           </tr>
         </tbody>
       </table>
-      <p class="meta">
-        ※ 사용자가 저장한 목적지 및 정밀 위치(길찾기 실행 시)는 기기 내에서만
-        사용되며 외부로 전송되지 않습니다.
-      </p>
-
-      <h2>3. 정보의 이용 및 공유</h2>
       <p>
-        위 표에 기재된 정보는 <strong>광고 및 마케팅 목적</strong>으로 광고 파트너인
-        <strong>Google AdMob</strong>에 의해 수집·공유됩니다. 당사는 해당 정보를
-        판매하지 않으며, 위에 명시된 목적 외로 이용하지 않습니다.
-      </p>
-      <p>
-        Google의 데이터 처리 방식에 대한 자세한 내용은 다음을 참고하시기 바랍니다:
+        이 정보는 Google AdMob이 수집·이용하며, 개발자는 이를 판매하지 않고 위에 적힌 목적
+        외로 이용하지 않습니다. 자세한 내용은 아래를 참고하시기 바랍니다.
       </p>
       <ul>
-        <li>
-          Google 개인정보처리방침:
-          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">
-            https://policies.google.com/privacy</a>
-        </li>
-        <li>
-          Google이 파트너 사이트/앱에서 정보를 사용하는 방식:
-          <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">
-            https://policies.google.com/technologies/partner-sites</a>
-        </li>
+        <li>Google 개인정보처리방침: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
+        <li>Google이 파트너 사이트/앱에서 정보를 사용하는 방식:
+          <a href="https://policies.google.com/technologies/partner-sites">https://policies.google.com/technologies/partner-sites</a></li>
       </ul>
 
-      <h2>4. 데이터 보안</h2>
+      <h2>7. 데이터 보안</h2>
       <p>
-        광고 서비스를 통해 전송되는 데이터는 <strong>전송 중 암호화(HTTPS/TLS)</strong>됩니다.
-        사용자가 저장한 목적지 정보는 기기의 로컬 저장소에만 보관됩니다.
+        앱이 보내는 요청과 클라우드 동기화는 전송 중 암호화(HTTPS/TLS)됩니다. 기기에 저장된
+        데이터는 운영체제가 제공하는 앱 저장소 보호를 받습니다.
       </p>
 
-      <h2>5. 데이터 보관 및 삭제</h2>
+      <h2>8. 데이터 보관 및 삭제</h2>
       <p>
-        당사는 사용자의 데이터를 서버에 저장하지 않으므로 별도의 서버 데이터 삭제
-        요청 절차를 두고 있지 않습니다. 기기 내에 저장된 데이터(목적지 목록 등)는
-        앱을 삭제(제거)하면 함께 삭제됩니다. 광고 식별자는 기기 설정에서
-        재설정하거나 맞춤 광고를 해제할 수 있습니다.
+        개발자가 보관하는 데이터가 없으므로 개발자에게 삭제를 요청할 대상이 없습니다. 사용자가
+        직접 지우는 방법은 다음과 같습니다.
       </p>
       <ul>
-        <li>Android: 설정 &gt; Google &gt; 광고 &gt; 광고 ID 재설정 / 삭제</li>
+        <li><strong>개별 목적지</strong> — 목록에서 항목의 메뉴를 열어 삭제합니다. 삭제 결과는
+          클라우드 사본에도 반영됩니다.</li>
+        <li><strong>iOS의 iCloud 사본</strong> — 설정 &gt; 백업에서 iCloud 동기화를 끄면 iCloud에
+          보관된 사본이 삭제됩니다.</li>
+        <li><strong>Android의 백업 사본</strong> — 기기의 구글 백업 설정에서 해당 앱의 백업을
+          삭제합니다.</li>
+        <li><strong>기기 내 데이터</strong> — 앱을 삭제하면 함께 지워집니다.</li>
       </ul>
-
-      <h2>6. 아동의 개인정보</h2>
+      <div class="callout">
+        <strong>참고.</strong> 앱을 삭제해도 클라우드 사본은 그대로 남습니다. 이는 의도된 동작으로,
+        앱을 다시 설치했을 때 저장한 장소가 돌아오게 하기 위한 것입니다. 사본까지 지우려면 위의
+        해당 항목을 먼저 수행하세요.
+      </div>
       <p>
-        본 앱은 만 13세 미만 아동을 주요 대상으로 하지 않으며, 아동으로부터 고의로
-        개인정보를 수집하지 않습니다.
+        광고 식별자는 기기 설정에서 재설정하거나 맞춤 광고를 해제할 수 있습니다
+        (Android: 설정 &gt; Google &gt; 광고).
       </p>
 
-      <h2>7. 방침의 변경</h2>
+      <h2>9. 아동의 개인정보</h2>
       <p>
-        본 개인정보처리방침은 법령이나 서비스 변경에 따라 개정될 수 있으며, 변경 시
-        본 페이지를 통해 공지합니다. 상단의 "최종 수정일"을 참고하시기 바랍니다.
+        본 앱은 만 13세 미만 아동을 주요 대상으로 하지 않으며, 아동으로부터 고의로 개인정보를
+        수집하지 않습니다.
       </p>
 
-      <h2>8. 문의처</h2>
+      <h2>10. 방침의 변경</h2>
       <p>
-        개인정보처리방침에 관한 문의는 아래 이메일로 연락해 주시기 바랍니다.
+        본 방침은 법령이나 서비스 변경에 따라 개정될 수 있으며, 변경 시 본 페이지를 통해
+        공지합니다. 상단의 "최종 수정일"을 참고하시기 바랍니다.
       </p>
+
+      <h2>11. 문의처</h2>
       <ul>
         <li>앱 이름: Desty (<code>com.desty.desty</code>)</li>
         <li>이메일: <a href="mailto:genai.host.1@gmail.com">genai.host.1@gmail.com</a></li>
@@ -211,31 +283,111 @@
     <section id="en">
       <header>
         <h1>Privacy Policy</h1>
-        <p class="meta">Desty mobile application</p>
-        <p class="meta">Effective date: July 15, 2026 · Last updated: July 15, 2026</p>
+        <p class="meta">Desty mobile application · <code>com.desty.desty</code></p>
+        <p class="meta">Effective date: August 22, 2026 · Last updated: August 22, 2026</p>
         <p class="lang-switch"><a onclick="showLang('ko')">한국어</a></p>
       </header>
 
       <p>
-        This Privacy Policy explains how Desty ("the App") collects, uses, shares,
-        and protects your information. By installing and using the App, you agree
-        to the practices described in this policy.
+        This Privacy Policy explains how Desty ("the App") handles your information.
+        Some behaviour differs by platform, so iOS and Android are described separately
+        where that matters.
       </p>
+
+      <div class="callout">
+        <strong>In short.</strong> The App has no sign-up, no login, and no server run by
+        the developer. Destinations you save live on your device and in <em>your own</em>
+        cloud account (iCloud on iOS, Google account backup on Android), which the
+        developer cannot read. The Android version shows ads, and the ad partner collects
+        data of its own. The iOS version shows no ads.
+      </div>
 
       <h2>1. About the App</h2>
       <p>
-        Desty lets you save a list of destinations and, when you tap an entry,
-        launches directions in a map app (such as Google Maps). Destination data
-        you save is <strong>stored only on your device</strong>; we do not collect
-        or store it on any server or database.
+        Desty lets you save the places you go often and, when you tap one, opens
+        directions in a map app (Google Maps). A destination holds a name, an address or
+        place name, an optional note, an optional group, and coordinates if you captured
+        them yourself.
       </p>
 
-      <h2>2. Information We Collect</h2>
+      <h2>2. What the Developer Collects</h2>
       <p>
-        The App does not require registration or login and does not request or
-        collect directly identifying personal information such as your name, email,
-        or phone number. However, the in-app advertising service (Google AdMob) may
-        collect and process the following data:
+        <strong>Nothing.</strong> The App requires no account or login, never asks for
+        identifying information such as your name, email, or phone number, and there is no
+        server or database operated by the developer. Destinations you save are never sent
+        to us.
+      </p>
+
+      <h2>3. Where Your Data Is Stored</h2>
+      <p>
+        Your destination list and app settings (sort order, language) are kept in the
+        App's storage on your device. In addition, a copy is kept in
+        <strong>your own cloud account</strong> so that your list survives deleting and
+        reinstalling the App.
+      </p>
+      <table>
+        <thead>
+          <tr><th>Platform</th><th>Where the copy lives</th><th>Developer access</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>iOS</td>
+            <td>Your iCloud account (iCloud key-value store). Can be turned off in
+              Settings &gt; Backup inside the App.</td>
+            <td>None</td>
+          </tr>
+          <tr>
+            <td>Android</td>
+            <td>Your Google account (Android Auto Backup), following your device's system
+              backup settings.</td>
+            <td>None</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        In both cases the data goes into an account that belongs to you, and its handling
+        is governed by Apple's and Google's respective privacy policies. The developer has
+        no means of reading it.
+      </p>
+      <p>
+        The App's settings screen also offers an <strong>Export</strong> action that writes
+        your list to a JSON file. Where that file goes, and what happens to it afterwards,
+        is entirely up to you.
+      </p>
+
+      <h2>4. Location</h2>
+      <p>
+        The App asks for location permission and reads your coordinates
+        <strong>only when you tap "Use current location"</strong> on the add or edit form.
+        The coordinates are stored as part of that destination, exactly as described in
+        section 3, and are never sent to the developer. The App does not track your
+        location in the background.
+      </p>
+
+      <h2>5. Network Requests the App Makes</h2>
+      <p>The App makes one request of its own:</p>
+      <ul>
+        <li>
+          <strong>Expanding short links.</strong> When you share a place from Google Maps
+          into Desty, the App follows the <code>maps.app.goo.gl</code> short link in that
+          share to recover the place name and coordinates. That request goes to Google; it
+          does not pass through the developer.
+        </li>
+      </ul>
+      <p>
+        Separately, tapping a destination hands a map link to your map app or browser to
+        open. From that point on, that app's and Google's policies apply.
+      </p>
+
+      <h2>6. Advertising — Android Only</h2>
+      <p>
+        <strong>The iOS version shows no ads.</strong> The advertising SDK is never
+        initialized there, so no ad requests are made and no advertising identifier is
+        collected.
+      </p>
+      <p>
+        <strong>The Android version shows banner ads</strong>, and our advertising partner
+        Google AdMob may collect and process the following:
       </p>
       <table>
         <thead>
@@ -244,7 +396,8 @@
         <tbody>
           <tr>
             <td>Approximate location</td>
-            <td>City-level approximate location (not precise GPS coordinates)</td>
+            <td>City-level approximation, separate from the precise coordinates the App
+              captures</td>
             <td>Serving relevant ads</td>
           </tr>
           <tr>
@@ -254,66 +407,61 @@
           </tr>
         </tbody>
       </table>
-      <p class="meta">
-        Note: Your saved destinations and precise location (when launching
-        directions) are used only on your device and are not transmitted to us.
-      </p>
-
-      <h2>3. How Information Is Used and Shared</h2>
       <p>
-        The information above is collected and shared by our advertising partner
-        <strong>Google AdMob</strong> for <strong>advertising and marketing</strong>
-        purposes. We do not sell this information and do not use it for any purpose
-        beyond those stated above.
-      </p>
-      <p>For details on Google's data practices, please see:</p>
-      <ul>
-        <li>
-          Google Privacy Policy:
-          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">
-            https://policies.google.com/privacy</a>
-        </li>
-        <li>
-          How Google uses information from sites/apps that use its services:
-          <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">
-            https://policies.google.com/technologies/partner-sites</a>
-        </li>
-      </ul>
-
-      <h2>4. Data Security</h2>
-      <p>
-        Data transmitted through the advertising service is
-        <strong>encrypted in transit (HTTPS/TLS)</strong>. Destinations you save
-        are kept only in your device's local storage.
-      </p>
-
-      <h2>5. Data Retention and Deletion</h2>
-      <p>
-        Because we do not store your data on any server, there is no separate
-        server-side deletion request process. Data stored on your device (such as
-        your destination list) is removed when you uninstall the App. You can reset
-        your advertising identifier or opt out of personalized ads in your device
-        settings.
+        This information is collected and used by Google AdMob. The developer does not sell
+        it and does not use it for any purpose beyond those stated above. For details:
       </p>
       <ul>
-        <li>Android: Settings &gt; Google &gt; Ads &gt; Reset / delete advertising ID</li>
+        <li>Google Privacy Policy: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
+        <li>How Google uses information from sites/apps that use its services:
+          <a href="https://policies.google.com/technologies/partner-sites">https://policies.google.com/technologies/partner-sites</a></li>
       </ul>
 
-      <h2>6. Children's Privacy</h2>
+      <h2>7. Data Security</h2>
       <p>
-        The App is not primarily directed at children under 13 and does not
-        knowingly collect personal information from children.
+        Requests the App makes and cloud synchronisation are encrypted in transit
+        (HTTPS/TLS). Data on your device is protected by the operating system's app storage
+        protections.
       </p>
 
-      <h2>7. Changes to This Policy</h2>
+      <h2>8. Data Retention and Deletion</h2>
       <p>
-        We may update this Privacy Policy to reflect changes in law or our service.
-        Any changes will be posted on this page. Please refer to the "Last updated"
-        date at the top.
+        Because the developer stores nothing, there is nothing to ask the developer to
+        delete. You can remove your data yourself:
+      </p>
+      <ul>
+        <li><strong>A single destination</strong> — open its menu in the list and delete it.
+          The deletion is reflected in the cloud copy as well.</li>
+        <li><strong>The iCloud copy (iOS)</strong> — turn off iCloud sync in the App's
+          Settings &gt; Backup, which deletes the copy held in iCloud.</li>
+        <li><strong>The backup copy (Android)</strong> — delete the App's backup in your
+          device's Google backup settings.</li>
+        <li><strong>Data on the device</strong> — removed when you uninstall the App.</li>
+      </ul>
+      <div class="callout">
+        <strong>Note.</strong> Uninstalling the App does not remove the cloud copy. That is
+        deliberate: it is what brings your saved places back when you reinstall. To remove
+        the copy as well, use the relevant step above first.
+      </div>
+      <p>
+        You can reset your advertising identifier or opt out of personalised ads in your
+        device settings (Android: Settings &gt; Google &gt; Ads).
       </p>
 
-      <h2>8. Contact</h2>
-      <p>For questions about this Privacy Policy, please contact us:</p>
+      <h2>9. Children's Privacy</h2>
+      <p>
+        The App is not primarily directed at children under 13 and does not knowingly
+        collect personal information from children.
+      </p>
+
+      <h2>10. Changes to This Policy</h2>
+      <p>
+        We may update this Privacy Policy to reflect changes in law or in the service. Any
+        changes will be posted on this page. Please refer to the "Last updated" date at the
+        top.
+      </p>
+
+      <h2>11. Contact</h2>
       <ul>
         <li>App name: Desty (<code>com.desty.desty</code>)</li>
         <li>Email: <a href="mailto:genai.host.1@gmail.com">genai.host.1@gmail.com</a></li>
